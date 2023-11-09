@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+   int i,n;
+   cout<<"Enter students number:";
+   cin>>n;
+   int students[n],sum;
+   for(i=1;i<n;i++)
+   {
+
+      cout<<"student mark is "<<i<<":";
+      cin>>students[i];
+      sum=sum+students[i];
+
+   }
+   cout<<"Total number is:"<<sum<<endl;
+   float  ava;
+
+   ava= (float)sum/n;
+
+   cout<<"Avarage mark is:"<<ava<<endl;
+
+    int max = students[0];
+    int min = students[0];
+    for(int i=1; i<n; i++)
+    {
+        if(max < students[i])
+        {
+            max = students[i];
+        }
+
+        if(min > students[i])
+        {
+            min = students[i];
+        }
+    }
+    cout << "Maximum marks = " << max << endl;
+    cout << "Minimum marks = " << min;
+    return 0;
+}
+
